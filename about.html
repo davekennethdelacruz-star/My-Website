@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>About Me</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#0a1f44,#6f4c83);
+color:white;
+overflow:hidden;
+}
+
+/* 🔵 SAME BLOBS AS HOMEPAGE */
+.blob{
+position:absolute;
+border-radius:50%;
+filter:blur(90px);
+opacity:0.5;
+animation:move 12s infinite ease-in-out alternate;
+}
+
+.blob1{
+width:350px;
+height:350px;
+background:#ffd700;
+top:10%;
+left:10%;
+}
+
+.blob2{
+width:300px;
+height:300px;
+background:#00c3ff;
+top:60%;
+left:70%;
+animation-delay:2s;
+}
+
+.blob3{
+width:250px;
+height:250px;
+background:#ff4ecd;
+top:70%;
+left:20%;
+animation-delay:4s;
+}
+
+@keyframes move{
+0%{transform:translate(0,0);}
+100%{transform:translate(40px,-40px);}
+}
+
+/* NAVBAR */
+header{
+display:flex;
+justify-content:space-between;
+padding:25px 80px;
+position:relative;
+z-index:2;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:30px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#ffd700;
+}
+
+/* SECTION */
+.about{
+padding:60px 20px;
+text-align:center;
+position:relative;
+z-index:2;
+}
+
+.title{
+font-size:50px;
+margin-bottom:40px;
+}
+
+/* CONTAINER */
+.about-container{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+max-width:1000px;
+margin:auto;
+}
+
+/* GLASS 3D BOX */
+.box{
+background:rgba(255,255,255,0.08);
+padding:30px;
+border-radius:20px;
+backdrop-filter:blur(15px);
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+transition:0.4s;
+text-align:justify;
+}
+
+.box:hover{
+transform:translateY(-10px) scale(1.03);
+background:rgba(255,255,255,0.15);
+}
+
+.box h2{
+color:#ffd700;
+margin-bottom:15px;
+text-align:center;
+}
+
+/* TEXT */
+.box p{
+font-size:16px;
+line-height:1.7;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.about-container{
+grid-template-columns:1fr;
+}
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🔵 BLOBS -->
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
+<div class="blob blob3"></div>
+
+<header>
+<h2>BOSS🦝</h2>
+
+<nav>
+<ul>
+<li><a href="Homepage.html">Homepage</a></li>
+<li><a href="about.html">About Me</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="Diary.html">Diary</a></li> 
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="about">
+
+<h1 class="title">ABOUT ME</h1>
+
+<div class="about-container">
+
+<!-- PROFILE -->
+<div class="box">
+<h2>Profile</h2>
+<p><b>Name:</b> Kenneth Dave Delacruz</p>
+<p><b>Course:</b> BSIT 2nd Year</p>
+<p><b>Age:</b> 19</p>
+</div>
+
+<!-- EDUCATION -->
+<div class="box">
+<h2>Education</h2>
+<p>
+I completed my Senior High School at Jordan Woods Academy under the ICT strand. 
+I studied at Novaliches High School and finished my Elementary education at 
+Damong Maliit Elementary School. I am currently taking up Bachelor of Science 
+in Information Technology (BSIT) in college.
+</p>
+</div>
+
+<!-- SKILLS -->
+<div class="box">
+<h2>Skills</h2>
+<p>
+I have basic computer skills such as using a computer, HTML, CSS, and simple 
+computer troubleshooting. I am continuously improving my knowledge in programming 
+and technology to build a strong foundation for my future career.
+</p>
+</div>
+
+<!-- ABOUT ME -->
+<div class="box">
+<h2>About Me</h2>
+<p>
+I’m still learning and figuring things out in life, but I am focused on improving 
+myself every day. I have a strong passion for cycling and calisthenics, which help 
+me stay disciplined and active. Right now, I am building my skills and experience 
+both in school and at work to prepare for my future. I know I still have a long way 
+to go, but I am willing to work hard and continue growing until I achieve my dreams.
+</p>
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>

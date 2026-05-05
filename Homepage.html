@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Homepage</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#0a1f44,#6f4c83);
+color:white;
+overflow:hidden;
+}
+
+/* 🔵 SOFT 3D BLOBS */
+.blob{
+position:absolute;
+border-radius:50%;
+filter:blur(90px);
+opacity:0.5;
+animation:move 12s infinite ease-in-out alternate;
+}
+
+.blob1{
+width:350px;
+height:350px;
+background:#ffd700;
+top:10%;
+left:10%;
+}
+
+.blob2{
+width:300px;
+height:300px;
+background:#00c3ff;
+top:60%;
+left:70%;
+animation-delay:2s;
+}
+
+.blob3{
+width:250px;
+height:250px;
+background:#ff4ecd;
+top:70%;
+left:20%;
+animation-delay:4s;
+}
+
+@keyframes move{
+0%{transform:translate(0,0);}
+100%{transform:translate(40px,-40px);}
+}
+
+/* NAVBAR */
+header{
+display:flex;
+justify-content:space-between;
+padding:25px 80px;
+position:relative;
+z-index:2;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:30px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#ffd700;
+}
+
+/* MAIN */
+.about{
+text-align:center;
+padding:60px 20px;
+position:relative;
+z-index:2;
+}
+
+/* TITLE */
+.title{
+font-size:50px;
+margin-bottom:20px;
+}
+
+/* PROFILE IMAGE */
+.profile-img{
+width:240px;
+height:240px;
+border-radius:50%;
+object-fit:cover;
+border:6px solid #ffd700;
+margin:20px 0;
+box-shadow:0 15px 40px rgba(0,0,0,0.6);
+}
+
+/* NAME */
+.name{
+font-size:32px;
+font-weight:600;
+}
+
+.role{
+color:#ffd700;
+margin-bottom:20px;
+}
+
+/* INTRO */
+.intro{
+max-width:700px;
+margin:20px auto 40px;
+font-size:18px;
+line-height:1.6;
+color:#e0e0e0;
+}
+
+/* CARDS */
+.about-container{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+max-width:900px;
+margin:auto;
+}
+
+.box{
+background:rgba(255,255,255,0.08);
+padding:30px;
+border-radius:20px;
+backdrop-filter:blur(15px);
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+transition:0.4s;
+}
+
+.box:hover{
+transform:translateY(-10px) scale(1.03);
+background:rgba(255,255,255,0.15);
+}
+
+.box h2{
+color:#ffd700;
+margin-bottom:15px;
+}
+
+.box p{
+font-size:16px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.about-container{
+grid-template-columns:1fr;
+}
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🔵 BLOBS -->
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
+<div class="blob blob3"></div>
+
+<header>
+<h2>BOSS🦝</h2>
+
+<nav>
+<ul>
+<li><a href="Homepage.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="Diary.html">Diary</a></li> 
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="about">
+
+<h1 class="title">Homepage</h1>
+
+<img src="hero.png" class="profile-img">
+
+<h2 class="name">Kenneth Dave Delacruz</h2>
+<p class="role">BSIT Student</p>
+
+<p class="intro">
+I am Kenneth Dave Delacruz, but most people call me Dave. I am currently studying Information Technology at CSTA while also working at Novizia, a fixed gear bike shop. I am passionate about learning new skills, improving myself, and balancing both my studies and work as I prepare for my future.
+</p>
+
+<div class="about-container">
+
+<div class="box">
+<h2>Basic Info</h2>
+<p><b>Name:</b> Kenneth Dave Delacruz</p>
+<p><b>Age:</b> 19</p>
+<p><b>Course:</b> BSIT 2nd Year</p>
+</div>
+
+<div class="box">
+<h2>What I Do</h2>
+<p>Currently studying IT while gaining real-world experience working at a bike shop.</p>
+</div>
+
+<div class="box">
+<h2>Skills</h2>
+<p>HTML, CSS, Basic Programming, Computer Troubleshooting.</p>
+</div>
+
+<div class="box">
+<h2>Passion</h2>
+<p>I enjoy cycling and staying active, helping me stay disciplined and focused.</p>
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>
